@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  #fdfdfd;
+}
+
+.btn{
+    font-family: inherit;
+    background-color: #000000;
+    color: #f08294;
+    padding:10px;
+    border-style: none;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: #f08294;
+    color: #000000;
+    transition: all 0.3s ease 0s;
+    cursor:pointer;
+    
+}
+
+/*---------- Header ----------*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width: 80%;
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 20px;
+    color:#000000;
+    
+}
+
+.logo-name{
+    color:#f08294;
+    margin-left: 5px;
+}
+
+.menu{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li, a{
+    text-decoration: none;
+    list-style: none;
+    color:#000000;
+    font-weight: bold;
+}
+
+.nav-item{
+    margin: 10px;
+}
+
+.nav-item :hover{
+    color: #f08294;
+    transition: all 0.3s ease 0s;
+}
+
+/*---------- Hero section ----------*/
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url(/images/hero-background.png);
+    background-size: cover; */
+   
+}
+
+.hero-items{
+    width: 70%;
+}
+
+.hero-name{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 25px 25px 10px 25px;
+}
+
+.hero-text{
+    margin: 10px 25px 10px 25px;
+}
+
+.contact-btn{
+    margin:10px 25px 25px 25px;
+    font-size: 16px;
+}
+
+/*---------- Scroll indicator ----------*/
+.scroll{
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow{
+    border: solid #f08294;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.arrow:nth-child(2){
+    animation: arrow1 1.5s ease-in-out infinite;
+}
+
+.arrow:nth-child(3){
+    animation: arrow2 1.5s ease-in-out infinite;
+}
+
+@keyframes arrow1{
+    100%{
+        opacity:0;
+        top:100%;
+    }
+}
+
+@keyframes arrow2{
+    100%{
+        opacity:0;
+        top:50%;
+    }
+}
+/*---------- About, Favorites----------*/
+.about, .favorites{
+    display:flex;
+    justify-content: center;
+}
+
+.about-items, .fave-items{
+    width: 70%;
+}
+
+.about-items>h2, .fave-items>h2{
+    text-align: center;
+    margin: 30px;
+}
+
+.about-text{
+    margin:10px;
+}
+
+.movies>h3, .tv>h3, .movie-title, .tv-title{
+    text-align: center;
+}
+
+.tv, .movies{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+hr{
+    margin-bottom: 20px;
+}
+
+.movies-grid, .tv-grid{
+    display: flex;
+    justify-content: space-around;
+}
+
+.movie-img, .tv-img{
+    height:320px;
+    width: 216px;
+}
+
+/*---------- Gallery ----------*/
+/*---------- Blog ----------*/
+/*---------- Reviews ----------*/
+/*---------- Contact ----------*/
+.contact-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/contact-background.jpg);
+    background-size: cover;
+    height: 40em;
+}
+
+.contact{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text{
+    margin: 10px;
+    text-align: center;
+}
+
+.contact-form{
+    width: 50%;
+    display:block;
+}
+
+.row{
+    display: flex;
+}
+
+.fname, .lname{
+    margin: 10px;
+    width: 50%;
+}
+ 
+.email, .message{
+    margin: 10px;
+    margin-bottom:15px;
+}
+
+.fname>input, .lname>input{
+    padding: 5px;
+    width: 95%;
+}
+
+.email>input{
+    padding:6px;
+    width: 97.5%;
+}
+
+.message>textarea{
+    padding:5px;
+    width:98%;
+}
+
+.submit-btn{
+    margin: 10px;
+}
+
+/*---------- Footer ----------*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: #fdfdfd;
+    padding-top: 20px;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-footer{
+    font-size: 25px;    
+    font-weight: 700;
+    color: #fdfdfd;
+}
+
+.socials{
+    display:flex;
+    justify-content: space-between;
+    padding:0;
+}
+
+.socials-link{
+    padding:15px;
+}
+
+.facebook, .instagram, .linkedin, .github{
+    height:35px;
+    width:35px;
+}
+
+.gmail{
+    height:30px;
+    width:40px;
+}
+
+.footer-copyright{
+    font-size: 12px;
+    text-align: center;
+}
