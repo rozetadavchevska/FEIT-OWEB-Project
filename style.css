@@ -169,11 +169,11 @@ li, a{
     margin:10px;
 }
 
-.movies>h3, .tv>h3, .movie-title, .tv-title{
+.movies>h3, .tv>h3, .music>h3, .movie-title, .tv-title{
     text-align: center;
 }
 
-.tv, .movies{
+.tv, .movies, .music{
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -182,7 +182,7 @@ hr{
     margin-bottom: 20px;
 }
 
-.movies-grid, .tv-grid{
+.movies-grid, .tv-grid, .music-grid{
     display: flex;
     justify-content: space-around;
 }
@@ -195,6 +195,42 @@ hr{
 /*---------- Gallery ----------*/
 /*---------- Blog ----------*/
 /*---------- Reviews ----------*/
+.review-section{
+    display:flex;
+    justify-content: center;
+}
+
+.review{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+    padding:20px;
+    border-style: double;
+    border-color: #f08294;
+}
+
+.heard>div, .liked>div, .experience>div{
+    display:flex;
+    justify-content: space-around;
+    margin:10px;
+}
+
+.name>div>label>input, .heard>div>label>input, .liked>div>label>input, 
+.experience>div>label>input, .comment>div>label>input{
+    margin:10px;
+}
+
+ .name, .heard, .liked, .experience, .comment, .submit-review-btn{
+    margin:20px;
+}
+
+.name>input, .comment>textarea{
+    padding:5px;
+}
+
 /*---------- Contact ----------*/
 .contact-section{
     display:flex;
@@ -213,12 +249,12 @@ hr{
     align-items: center;
 }
 
-.contact-text{
+.contact-text, .review-text{
     margin: 10px;
     text-align: center;
 }
 
-.contact-form{
+.contact-form, .review-form{
     width: 50%;
     display:block;
 }
@@ -247,7 +283,7 @@ hr{
     width: 97.5%;
 }
 
-.message>textarea{
+.message>textarea, .comment>textarea, .name>input{
     padding:5px;
     width:98%;
 }
