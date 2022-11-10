@@ -29,6 +29,10 @@ body{
     
 }
 
+.hamburger-menu{
+    display:none;
+}
+
 /*---------- Header ----------*/
 header{
     display: flex;
@@ -95,7 +99,6 @@ li, a{
 }
 
 .hero-img{
-    
     margin-right: 100px;
     border-radius: 50%;
 }
@@ -438,4 +441,101 @@ footer{
 .footer-copyright{
     font-size: 12px;
     text-align: center;
+}
+
+
+/*---------- Responsive design ----------*/
+
+@media (max-width: 768px) {
+    .menu, .scroll, .hero-background, .hero-socials{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block;
+        position: relative;
+        cursor: pointer;
+        margin: 10px;
+        border:none;
+        background: transparent;
+    }
+
+    .hamburger-menu>span{
+        display: block;
+        width: 30px;
+        height: 5px;
+        margin: 5px;
+        position: relative;
+        background-color: #000000;
+        border-radius: 5px;
+        transform-origin: 0 0; 
+        transition: 0.4s;
+    }
+
+    .hamburger-menu:hover span:nth-child(2){
+        transform: translateX(10px);
+        background-color: #f08294;
+    }
+
+    .hamburger-menu.active span:nth-child(1){
+        transform: translate(1px, -2px) rotate(45deg);
+    }
+
+    .hamburger-menu.active span:nth-child(2){
+        opacity: 0;
+        transform: translateX(15px);
+    } 
+
+    .hamburger-menu.active span:nth-child(3){
+        transform: translate(-2px, 0px) rotate(-45deg);
+    }
+
+    .menu.active{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .hero-items{
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .my-photo{
+        position: static;
+        margin: 0;
+    }
+
+    .movies-grid, .tv-grid, .music-grid{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feed, .blog-feed{
+        justify-content: center;
+    }
+
+    .review, .review-form, .contact{
+        width: 100%;
+    }
+
+    .contact-form{
+        width: 90%;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .fname, .lname{
+        width: 98%;
+    }
+
+    .heard>div, .liked>div, .experience>div{
+        flex-direction: column;
+        margin:10px;
+    }
 }
