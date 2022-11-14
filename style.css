@@ -55,7 +55,6 @@ nav{
     font-weight: 700;
     font-size: 20px;
     color:#000000;
-    
 }
 
 .logo-name{
@@ -179,6 +178,7 @@ li, a{
         top:50%;
     }
 }
+
 /*---------- About, Favorites----------*/
 .about, .favorites{
     display:flex;
@@ -290,13 +290,10 @@ hr{
     margin: 5px 0 5px 0;
 }
 
-.blog-post-text{
+.blog-post-text, .blog-btn{
     margin: 5px 0 5px 0;
 }
 
-.blog-btn{
-    margin: 5px 0 5px 0;
-}
 
 /*---------- Reviews ----------*/
 .review-section{
